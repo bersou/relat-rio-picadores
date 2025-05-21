@@ -17,7 +17,6 @@
             --light: #ecf0f1;
             --gray: #95a5a6;
         }
-        
         body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
@@ -25,7 +24,6 @@
             background-color: #f8f9fa;
             color: #333;
         }
-        
         .header {
             background: linear-gradient(135deg, #2c3e50, #3498db);
             color: white;
@@ -35,23 +33,19 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             margin-bottom: 2rem;
         }
-        
         .header h1 {
             margin: 0;
             font-size: 2.2rem;
         }
-        
         .header p {
             margin: 0.5rem 0 0;
             opacity: 0.9;
         }
-        
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
         .card {
             background-color: white;
             border-radius: 12px;
@@ -60,12 +54,10 @@
             margin-bottom: 2rem;
             transition: transform 0.3s, box-shadow 0.3s;
         }
-        
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 12px 20px rgba(0,0,0,0.1);
         }
-        
         .card-title {
             color: var(--dark);
             font-size: 1.5rem;
@@ -74,90 +66,24 @@
             padding-bottom: 0.5rem;
             border-bottom: 2px solid var(--light);
         }
-        
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 1rem 0;
         }
-        
         th, td {
             padding: 12px 15px;
             text-align: left;
             border-bottom: 1px solid #eee;
         }
-        
         th {
             background-color: var(--light);
             font-weight: 600;
             color: var(--dark);
         }
-        
         tr:hover td {
             background-color: #f8f9fa;
         }
-        
-        .status {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-weight: 600;
-        }
-        
-        .status-ok {
-            background-color: rgba(46, 204, 113, 0.1);
-            color: var(--success);
-        }
-        
-        .status-warning {
-            background-color: rgba(243, 156, 18, 0.1);
-            color: var(--warning);
-        }
-        
-        .status-danger {
-            background-color: rgba(231, 76, 60, 0.1);
-            color: var(--danger);
-        }
-        
-        .dashboard {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-        
-        .chart-container {
-            position: relative;
-            height: 350px;
-            background: white;
-            border-radius: 12px;
-            padding: 1rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-        
-        .conclusions {
-            background-color: #f8f9fa;
-            border-left: 4px solid var(--primary);
-            padding: 1.5rem;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .conclusions h3 {
-            margin-top: 0;
-            color: var(--dark);
-        }
-        
-        .conclusions ul {
-            padding-left: 1.2rem;
-        }
-        
-        .conclusions li {
-            margin-bottom: 0.8rem;
-            line-height: 1.5;
-        }
-        
         .badge {
             display: inline-block;
             padding: 0.35em 0.65em;
@@ -171,27 +97,96 @@
             border-radius: 0.25rem;
             background-color: var(--primary);
         }
-        
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        .status-ok {
+            background-color: rgba(46, 204, 113, 0.1);
+            color: var(--success);
+        }
+        .status-warning {
+            background-color: rgba(243, 156, 18, 0.1);
+            color: var(--warning);
+        }
+        .status-danger {
+            background-color: rgba(231, 76, 60, 0.1);
+            color: var(--danger);
+        }
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .chart-container {
+            position: relative;
+            height: 370px;
+            background: white;
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .conclusions {
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+        .conclusions h3 {
+            margin-top: 0;
+            color: var(--dark);
+        }
+        .conclusions ul {
+            padding-left: 1.2rem;
+        }
+        .conclusions li {
+            margin-bottom: 0.8rem;
+            line-height: 1.5;
+        }
+        .main-info {
+            display: flex;
+            gap: 2rem;
+            justify-content: flex-start;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .main-info > div {
+            background: #f1f8fb;
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            box-shadow: 0 2px 8px rgba(52,152,219,0.05);
+            font-weight: 600;
+            min-width: 180px;
+        }
         @media (max-width: 768px) {
             .dashboard {
                 grid-template-columns: 1fr;
             }
-            
             .header h1 {
                 font-size: 1.8rem;
             }
+            .main-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
         }
-
-
     </style>
 </head>
 <body>
     <div class="header">
         <h1>Relatório de Teste de Madeira de Pinus</h1>
-        <p>Análise detalhada do processamento no picador Demuth II</p>
     </div>
-    
     <div class="container">
+        <div class="main-info">
+            <div><i class="fas fa-clock"></i> <b>Turno:</b> B</div>
+            <div><i class="fas fa-tree"></i> <b>Material:</b> Pinus</div>
+            <div><i class="fas fa-cogs"></i> <b>Equipamento:</b> Demuth II</div>
+        </div>
         <div class="card">
             <h2 class="card-title">
                 <i class="fas fa-clipboard-check" style="color: var(--primary); margin-right: 10px;"></i>
@@ -209,7 +204,7 @@
                 <tbody>
                     <tr>
                         <td><strong>Umidade</strong></td>
-                        <td>59,00%</td>
+                        <td>58,11%</td>
                         <td>40% a 55%</td>
                         <td>
                             <span class="status status-warning">
@@ -220,7 +215,7 @@
                     </tr>
                     <tr>
                         <td><strong>Densidade</strong></td>
-                        <td>362,44 mg</td>
+                        <td>373,87 mg</td>
                         <td>300 mg a 400 mg</td>
                         <td>
                             <span class="status status-ok">
@@ -231,7 +226,7 @@
                     </tr>
                     <tr>
                         <td><strong>Horas de Facas</strong></td>
-                        <td>00:20</td>
+                        <td>06:05</td>
                         <td>≤ 7 horas</td>
                         <td>
                             <span class="status status-ok">
@@ -242,7 +237,7 @@
                     </tr>
                     <tr>
                         <td><strong>Perda de Finos</strong></td>
-                        <td>3,73%</td>
+                        <td>5,00%</td>
                         <td>≤ 7%</td>
                         <td>
                             <span class="status status-ok">
@@ -254,7 +249,6 @@
                 </tbody>
             </table>
         </div>
-        
         <div class="card">
             <h2 class="card-title">
                 <i class="fas fa-sitemap" style="color: var(--primary); margin-right: 10px;"></i>
@@ -271,58 +265,59 @@
                 <tbody>
                     <tr>
                         <td><strong>50mm</strong></td>
-                        <td>127,89</td>
-                        <td>2,63%</td>
+                        <td>15,04</td>
+                        <td>0,32%</td>
                     </tr>
                     <tr>
                         <td><strong>37,5mm</strong></td>
-                        <td>225,67</td>
-                        <td>4,65%</td>
+                        <td>105,33</td>
+                        <td>2,22%</td>
                     </tr>
                     <tr>
                         <td><strong>25mm</strong></td>
-                        <td>1111,55</td>
-                        <td>22,89%</td>
+                        <td>789,05</td>
+                        <td>16,62%</td>
                     </tr>
                     <tr>
                         <td><strong>16mm</strong></td>
-                        <td>1564,98</td>
-                        <td>32,22%</td>
+                        <td>1681,26</td>
+                        <td>35,41%</td>
                     </tr>
                     <tr>
                         <td><strong>6,3mm</strong></td>
-                        <td>1645,73</td>
-                        <td>33,88%</td>
+                        <td>1920,03</td>
+                        <td>40,44%</td>
                     </tr>
                     <tr>
                         <td><strong>2,0mm</strong></td>
-                        <td>157,69</td>
-                        <td>3,25%</td>
+                        <td>198,61</td>
+                        <td>4,18%</td>
                     </tr>
                     <tr>
                         <td><strong>0,0mm</strong></td>
-                        <td>23,51</td>
-                        <td>0,48%</td>
+                        <td>38,96</td>
+                        <td>0,82%</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        
         <div class="card">
             <h2 class="card-title">
-                <i class="fas fa-chart-line" style="color: var(--primary); margin-right: 10px;"></i>
+                <i class="fas fa-chart-bar" style="color: var(--primary); margin-right: 10px;"></i>
                 Dashboard de Análise
             </h2>
             <div class="dashboard">
                 <div class="chart-container">
-                    <canvas id="paramChart"></canvas>
+                    <canvas id="barParametros"></canvas>
                 </div>
                 <div class="chart-container">
-                    <canvas id="granulometryChart"></canvas>
+                    <canvas id="pieGranulometria"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="barGranulometria"></canvas>
                 </div>
             </div>
         </div>
-        
         <div class="card">
             <h2 class="card-title">
                 <i class="fas fa-clipboard-list" style="color: var(--primary); margin-right: 10px;"></i>
@@ -332,176 +327,204 @@
                 <h3><i class="fas fa-search" style="color: var(--primary); margin-right: 8px;"></i> Principais Achados</h3>
                 <ul>
                     <li>
-                        <strong>Umidade (59,00%):</strong> 
+                        <strong>Umidade (58,11%):</strong> 
                         <span class="badge" style="background-color: var(--warning);">Acima do ideal</span>
-                        A elevada umidade pode dificultar o corte limpo, contribuindo para maior geração de finos e menor eficiência energética.
+                        O valor de umidade está acima do intervalo recomendado, podendo aumentar a geração de finos e prejudicar o rendimento do picador.
                     </li>
                     <li>
-                        <strong>Densidade (362,44 mg):</strong> 
+                        <strong>Densidade (373,87 mg):</strong> 
                         <span class="badge" style="background-color: var(--success);">Dentro do padrão</span>
-                        Material com boa compactação, adequado para o processamento.
+                        Material apropriado para o processo de picagem.
                     </li>
                     <li>
-                        <strong>Horas de Facas (00:20):</strong> 
+                        <strong>Horas de Facas (06:05):</strong> 
                         <span class="badge" style="background-color: var(--success);">Dentro do limite</span>
-                        Facas praticamente novas, garantindo eficiência no corte.
+                        Facas em bom estado de uso, favorecendo cortes eficientes.
                     </li>
                     <li>
-                        <strong>Perda de Finos (3,73%):</strong> 
+                        <strong>Perda de Finos (5,00%):</strong> 
                         <span class="badge" style="background-color: var(--success);">Aceitável</span>
-                        Embora dentro do limite, a perda de finos está relativamente alta considerando o curto tempo de uso das facas (00:20). Como as madeiras chegam diretamente dos caminhões e são homogêneas, essa perda pode ser influenciada pela alta umidade ou pela configuração do picador (ex.: ajuste de peneiras ou velocidade). Essa observação é válida e sugere a necessidade de ajustes no processo para reduzir o desperdício.
+                        A perda de finos está controlada e abaixo do limite máximo sugerido.
                     </li>
                     <li>
-                        <strong>Distribuição Granulométrica:</strong> Concentração predominante em 16mm e 6,3mm (66,10%),
-                        sugerindo bom desempenho do picador, com ligeira redução na uniformidade em relação a testes anteriores.
+                        <strong>Distribuição Granulométrica:</strong>
+                        Predomínio de partículas nas malhas 16mm e 6,3mm (juntas 75,85%), indicando bom desempenho do picador, com baixa quantidade de partículas grossas e finos.
                     </li>
                 </ul>
-                
                 <h3 style="margin-top: 1.5rem;">
                     <i class="fas fa-tools" style="color: var(--primary); margin-right: 8px;"></i> 
                     Ações Recomendadas
                 </h3>
                 <ul>
-                    <li>Implementar ajustes no processo de secagem para reduzir a umidade da madeira antes do processamento, minimizando a geração de finos.</li>
-                    <li>Verificar a configuração do picador (ex.: abertura das peneiras, velocidade de rotação ou ângulo das facas) para otimizar a granulometria e reduzir a perda de finos.</li>
-                    <li>Monitorar possíveis variações nas características da madeira (ex.: proporção de alburno ou densidade entre lotes) que possam influenciar a picagem, mesmo com madeira homogênea.</li>
-                    <li>Continuar monitoramento regular das horas de uso das facas para manter a eficiência do picador.</li>
-                    <li>Realizar novo teste após ajustes de umidade e configuração do picador para verificar melhorias na perda de finos e na distribuição granulométrica.</li>
+                    <li>Reduzir a umidade da madeira antes do processamento para minimizar a geração de finos.</li>
+                    <li>Continuar monitorando o tempo de uso das facas para garantir a eficiência do corte.</li>
+                    <li>Repetir o teste após ajuste da umidade para verificar possíveis melhorias na distribuição granulométrica.</li>
+                    <li>Manter a configuração atual do picador, que favorece a produção nos tamanhos desejados.</li>
                 </ul>
             </div>
         </div>
     </div>
-
     <script>
-        // Gráfico de Parâmetros
-        const paramCtx = document.getElementById('paramChart').getContext('2d');
-        const paramChart = new Chart(paramCtx, {
+        // Bar Chart (Parâmetros do Teste vs Limites)
+        const barParamCtx = document.getElementById('barParametros').getContext('2d');
+        new Chart(barParamCtx, {
             type: 'bar',
             data: {
-                labels: ['Umidade (%)', 'Densidade (mg)', 'Horas de Facas', 'Perda de Finos (%)'],
-                datasets: [{
-                    label: 'Valor Encontrado',
-                    data: [59.00, 362.44, 0.33, 3.73],
-                    backgroundColor: [
-                        'rgba(243, 156, 18, 0.7)',
-                        'rgba(46, 204, 113, 0.7)',
-                        'rgba(46, 204, 113, 0.7)',
-                        'rgba(46, 204, 113, 0.7)'
-                    ],
-                    borderColor: [
-                        'rgba(243, 156, 18, 1)',
-                        'rgba(46, 204, 113, 1)',
-                        'rgba(46, 204, 113, 1)',
-                        'rgba(46, 204, 113, 1)'
-                    ],
-                    borderWidth: 1
-                },
-                {
-                    label: 'Limite Superior',
-                    data: [55, 400, 7, 7],
-                    backgroundColor: 'rgba(231, 76, 60, 0.2)',
-                    borderColor: 'rgba(231, 76, 60, 0.8)',
-                    borderWidth: 1,
-                    type: 'line',
-                    fill: false,
-                    pointRadius: 0,
-                    borderDash: [5, 5]
-                }]
+                labels: ['Umidade (%)', 'Densidade (mg)', 'Horas Facas (h)', 'Perda de Finos (%)'],
+                datasets: [
+                    {
+                        label: 'Valor Encontrado',
+                        data: [58.11, 373.87, 6.083, 5.00], // Horas Facas: 6:05 = 6.083h
+                        backgroundColor: [
+                            'rgba(243, 156, 18, 0.7)',
+                            'rgba(46, 204, 113, 0.7)',
+                            'rgba(41, 128, 185, 0.7)',
+                            'rgba(52, 152, 219, 0.7)'
+                        ],
+                        borderRadius: 10,
+                        borderSkipped: false,
+                        maxBarThickness: 48
+                    },
+                    {
+                        label: 'Limite Superior',
+                        data: [55, 400, 7, 7],
+                        backgroundColor: [
+                            'rgba(231, 76, 60, 0.4)',
+                            'rgba(231, 76, 60, 0.4)',
+                            'rgba(231, 76, 60, 0.4)',
+                            'rgba(231, 76, 60, 0.4)'
+                        ],
+                        type: 'line',
+                        order: 0,
+                        borderColor: 'rgba(231, 76, 60, 1)',
+                        borderWidth: 2,
+                        pointRadius: 5,
+                        fill: false,
+                        tension: 0.3
+                    },
+                    {
+                        label: 'Limite Inferior',
+                        data: [40, 300, 0, 0],
+                        backgroundColor: [
+                            'rgba(39, 174, 96, 0.2)',
+                            'rgba(39, 174, 96, 0.2)',
+                            'rgba(39, 174, 96, 0.2)',
+                            'rgba(39, 174, 96, 0.2)'
+                        ],
+                        type: 'line',
+                        order: 0,
+                        borderColor: 'rgba(39, 174, 96, 1)',
+                        borderWidth: 2,
+                        pointRadius: 5,
+                        fill: false,
+                        tension: 0.3
+                    }
+                ]
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: false,
                 plugins: {
+                    legend: { position: 'top' },
                     title: {
                         display: true,
-                        text: 'Comparação com Parâmetros Ideais',
-                        font: {
-                            size: 16,
-                            weight: 'bold'
-                        }
-                    },
-                    legend: {
-                        position: 'bottom',
-                        labels: {
-                            boxWidth: 12,
-                            padding: 20
-                        }
+                        text: 'Parâmetros do Teste vs Limites'
                     }
                 },
                 scales: {
                     y: {
                         beginAtZero: true,
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.05)'
-                        }
+                        grid: { color: '#f0f0f0' }
                     },
                     x: {
-                        grid: {
-                            display: false
-                        }
+                        grid: { display: false }
                     }
-                },
-                animation: {
-                    duration: 1500
                 }
             }
         });
 
-        // Gráfico de Granulometria
-        const granCtx = document.getElementById('granulometryChart').getContext('2d');
-        const granulometryChart = new Chart(granCtx, {
-            type: 'doughnut',
+        // Pie Chart (Distribuição Granulométrica)
+        const pieCtx = document.getElementById('pieGranulometria').getContext('2d');
+        new Chart(pieCtx, {
+            type: 'pie',
             data: {
-                labels: ['50mm (2,63%)', '37,5mm (4,65%)', '25mm (22,89%)', '16mm (32,22%)', '6,3mm (33,88%)', '2,0mm (3,25%)', '0,0mm (0,48%)'],
+                labels: [
+                    '50mm', '37,5mm', '25mm', '16mm', '6,3mm', '2,0mm', '0,0mm'
+                ],
                 datasets: [{
-                    data: [2.63, 4.65, 22.89, 32.22, 33.88, 3.25, 0.48],
+                    data: [0.32, 2.22, 16.62, 35.41, 40.44, 4.18, 0.82],
                     backgroundColor: [
-                        'rgba(41, 128, 185, 0.8)',
-                        'rgba(52, 152, 219, 0.8)',
-                        'rgba(155, 89, 182, 0.8)',
-                        'rgba(26, 188, 156, 0.8)',
-                        'rgba(46, 204, 113, 0.8)',
-                        'rgba(241, 196, 15, 0.8)',
-                        'rgba(231, 76, 60, 0.8)'
+                        'rgba(155, 89, 182, 0.85)',
+                        'rgba(52, 152, 219, 0.85)',
+                        'rgba(241, 196, 15, 0.85)',
+                        'rgba(46, 204, 113, 0.85)',
+                        'rgba(26, 188, 156, 0.85)',
+                        'rgba(230, 126, 34, 0.85)',
+                        'rgba(231, 76, 60, 0.85)'
                     ],
-                    borderWidth: 0,
-                    hoverOffset: 15
+                    borderColor: '#fff',
+                    borderWidth: 2
                 }]
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: false,
                 plugins: {
+                    legend: { position: 'right' },
                     title: {
                         display: true,
-                        text: 'Distribuição Granulométrica',
-                        font: {
-                            size: 16,
-                            weight: 'bold'
-                        }
-                    },
-                    legend: {
-                        position: 'right',
-                        labels: {
-                            boxWidth: 12,
-                            padding: 15,
-                            font: {
-                                size: 12
-                            }
-                        }
+                        text: 'Distribuição Granulométrica (%)'
                     },
                     tooltip: {
                         callbacks: {
                             label: function(context) {
-                                return context.label + ': ' + context.raw + '%';
+                                return `${context.label}: ${context.raw.toFixed(2)}%`;
                             }
                         }
                     }
+                }
+            }
+        });
+
+        // Bar Chart (Peso por Malha)
+        const barCtx = document.getElementById('barGranulometria').getContext('2d');
+        new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: [
+                    '50mm', '37,5mm', '25mm', '16mm', '6,3mm', '2,0mm', '0,0mm'
+                ],
+                datasets: [{
+                    label: 'Peso (g)',
+                    data: [15.04, 105.33, 789.05, 1681.26, 1920.03, 198.61, 38.96],
+                    backgroundColor: [
+                        'rgba(155, 89, 182, 0.7)',
+                        'rgba(52, 152, 219, 0.7)',
+                        'rgba(241, 196, 15, 0.7)',
+                        'rgba(46, 204, 113, 0.7)',
+                        'rgba(26, 188, 156, 0.7)',
+                        'rgba(230, 126, 34, 0.7)',
+                        'rgba(231, 76, 60, 0.7)'
+                    ],
+                    borderRadius: 10,
+                    borderSkipped: false,
+                    maxBarThickness: 50
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false },
+                    title: {
+                        display: true,
+                        text: 'Peso por Malha (g)'
+                    }
                 },
-                cutout: '65%',
-                animation: {
-                    animateScale: true,
-                    animateRotate: true
+                scales: {
+                    x: { grid: { display: false } },
+                    y: {
+                        beginAtZero: true,
+                        ticks: { stepSize: 500 },
+                        grid: { color: '#f0f0f0' }
+                    }
                 }
             }
         });
