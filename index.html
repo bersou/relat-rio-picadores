@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Variáveis CSS para cores */
         :root {
             --primary: #3498db;
             --success: #2ecc71;
@@ -18,8 +17,6 @@
             --light: #ecf0f1;
             --gray: #95a5a6;
         }
-        
-        /* Estilos globais do corpo */
         body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
@@ -27,8 +24,6 @@
             background-color: #f8f9fa;
             color: #333;
         }
-        
-        /* Estilos do cabeçalho do relatório */
         .header {
             background: linear-gradient(135deg, #2c3e50, #3498db);
             color: white;
@@ -38,25 +33,13 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             margin-bottom: 2rem;
         }
-        
-        .header h1 {
-            margin: 0;
-            font-size: 2.2rem;
-        }
-        
-        .header p {
-            margin: 0.5rem 0 0;
-            opacity: 0.9;
-        }
-        
-        /* Estilos do container principal */
+        .header h1 { margin: 0; font-size: 2.2rem; }
+        .header p { margin: 0.5rem 0 0; opacity: 0.9; }
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
-        /* Estilos dos cartões de conteúdo */
         .card {
             background-color: white;
             border-radius: 12px;
@@ -65,12 +48,10 @@
             margin-bottom: 2rem;
             transition: transform 0.3s, box-shadow 0.3s;
         }
-        
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 12px 20px rgba(0,0,0,0.1);
         }
-        
         .card-title {
             color: var(--dark);
             font-size: 1.5rem;
@@ -79,31 +60,22 @@
             padding-bottom: 0.5rem;
             border-bottom: 2px solid var(--light);
         }
-        
-        /* Estilos das tabelas */
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 1rem 0;
         }
-        
         th, td {
             padding: 12px 15px;
             text-align: left;
             border-bottom: 1px solid #eee;
         }
-        
         th {
             background-color: var(--light);
             font-weight: 600;
             color: var(--dark);
         }
-        
-        tr:hover td {
-            background-color: #f8f9fa;
-        }
-        
-        /* Estilos para o status (OK, Warning, Danger) */
+        tr:hover td { background-color: #f8f9fa; }
         .status {
             display: inline-flex;
             align-items: center;
@@ -112,30 +84,24 @@
             border-radius: 20px;
             font-weight: 600;
         }
-        
         .status-ok {
             background-color: rgba(46, 204, 113, 0.1);
             color: var(--success);
         }
-        
         .status-warning {
             background-color: rgba(243, 156, 18, 0.1);
             color: var(--warning);
         }
-        
         .status-danger {
             background-color: rgba(231, 76, 60, 0.1);
             color: var(--danger);
         }
-        
-        /* Estilos do dashboard com gráficos */
         .dashboard {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 1.5rem;
             margin-top: 1.5rem;
         }
-        
         .chart-container {
             position: relative;
             height: 350px;
@@ -144,30 +110,21 @@
             padding: 1rem;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
-        
-        /* Estilos da seção de conclusões */
         .conclusions {
             background-color: #f8f9fa;
             border-left: 4px solid var(--primary);
             padding: 1.5rem;
             border-radius: 0 8px 8px 0;
         }
-        
         .conclusions h3 {
             margin-top: 0;
             color: var(--dark);
         }
-        
-        .conclusions ul {
-            padding-left: 1.2rem;
-        }
-        
+        .conclusions ul { padding-left: 1.2rem; }
         .conclusions li {
             margin-bottom: 0.8rem;
             line-height: 1.5;
         }
-        
-        /* Estilos dos badges */
         .badge {
             display: inline-block;
             padding: 0.35em 0.65em;
@@ -181,13 +138,10 @@
             border-radius: 0.25rem;
             background-color: var(--primary);
         }
-        
-        /* Media queries para responsividade */
         @media (max-width: 768px) {
             .dashboard {
                 grid-template-columns: 1fr;
             }
-            
             .header h1 {
                 font-size: 1.8rem;
             }
@@ -353,29 +307,28 @@
                     <li>
                         <strong>Horas de Facas (00:40):</strong> 
                         <span class="badge" style="background-color: var(--success);">Dentro do limite</span>
-                        As facas estão em excelente condição e com baixo tempo de uso (0.67 horas), bem abaixo do limite de $\le 7$ horas, garantindo alta eficiência no corte.
+                        As facas estão em excelente condição e com baixo tempo de uso (0.67 horas), bem abaixo do limite de ≤ 7 horas, garantindo alta eficiência no corte.
                     </li>
                     <li>
                         <strong>Perda de Finos (5,48%):</strong> 
                         <span class="badge" style="background-color: var(--warning);">Aceitável (com ressalvas)</span>
-                        A perda de finos está dentro do limite aceitável de $\le 7\%$. No entanto, considerando o baixo tempo de uso das facas (00:40), essa perda é considerada *relativamente alta*. Isso sugere que, apesar de estar dentro do padrão, há espaço para otimização do processo para reduzir ainda mais o desperdício e melhorar a eficiência.
+                        A perda de finos está dentro do limite aceitável de ≤ 7%. No entanto, considerando o baixo tempo de uso das facas (00:40), essa perda é considerada <em>relativamente alta</em>.
                     </li>
                     <li>
                         <strong>Distribuição Granulométrica:</strong> Concentração predominante em 16mm e 6,3mm (79,61%),
-                        sugerindo um excelente desempenho do picador, com uma distribuição mais uniforme e desejável. A redução do percentual de malhas maiores (50mm, 37.5mm) e a concentração nas malhas médias indicam um processo de picagem mais eficaz.
+                        sugerindo um excelente desempenho do picador, com uma distribuição mais uniforme e desejável. A redução do percentual de malhas maiores (50mm, 37.5mm) e a concentração nas malhas médias indicam bom controle do processo.
                     </li>
                 </ul>
-                
                 <h3 style="margin-top: 1.5rem;">
                     <i class="fas fa-tools" style="color: var(--primary); margin-right: 8px;"></i> 
                     Ações Recomendadas
                 </h3>
                 <ul>
                     <li>Continuar monitorando a umidade da madeira para garantir que permaneça dentro da faixa ideal, otimizando o processo de picagem.</li>
-                    <li>Realizar verificações periódicas na configuração do picador (ex.: abertura das peneiras, velocidade de rotação ou ângulo das facas) para otimizar a granulometria e buscar reduzir ainda mais a perda de finos, especialmente considerando o baixo tempo de uso das facas.</li>
+                    <li>Realizar verificações periódicas na configuração do picador (ex.: abertura das peneiras, velocidade de rotação ou ângulo das facas) para otimizar a granulometria e buscar redução de finos.</li>
                     <li>Monitorar possíveis variações nas características da madeira (ex.: proporção de alburno ou densidade entre lotes) que possam influenciar a picagem, mesmo com madeira homogênea.</li>
                     <li>Continuar monitoramento regular das horas de uso das facas para manter a eficiência do picador.</li>
-                    <li>Considerar otimizações adicionais no processo de secagem, se possível, para buscar um ponto ainda mais ideal de umidade que possa contribuir para uma menor perda de finos e maior eficiência energética.</li>
+                    <li>Considerar otimizações adicionais no processo de secagem, se possível, para buscar um ponto ainda mais ideal de umidade que possa contribuir para uma menor perda de finos e melhor granulometria.</li>
                 </ul>
             </div>
         </div>
@@ -389,7 +342,7 @@
                 value: 51.08, 
                 minIdeal: 40, 
                 maxIdeal: 55, 
-                maxChart: 60, // Max para o eixo do gráfico
+                maxChart: 60, 
                 unit: '%' 
             },
             densidade: { 
@@ -422,17 +375,16 @@
         const actualValues = Object.values(paramsData).map(p => p.value);
         const minIdealValues = Object.values(paramsData).map(p => p.minIdeal);
         const maxIdealValues = Object.values(paramsData).map(p => p.maxIdeal);
-        const maxChartValues = Object.values(paramsData).map(p => p.maxChart);
 
         // Função para determinar a cor da barra com base no status
         function getBarColor(paramKey, value) {
             const p = paramsData[paramKey];
             if (value >= p.minIdeal && value <= p.maxIdeal) {
-                return 'rgba(46, 204, 113, 0.7)'; // Verde (Dentro do ideal)
+                return 'rgba(46, 204, 113, 0.7)';
             } else if (paramKey === 'perdaFinos' && value <= p.maxIdeal && value > 0) {
-                return 'rgba(243, 156, 18, 0.7)'; // Amarelo (Aceitável com ressalvas)
+                return 'rgba(243, 156, 18, 0.7)';
             } else {
-                return 'rgba(231, 76, 60, 0.7)'; // Vermelho (Fora do ideal)
+                return 'rgba(231, 76, 60, 0.7)';
             }
         }
 
@@ -453,7 +405,7 @@
         // Gráfico de Comparação de Parâmetros com Faixas Ideais
         const paramCtx = document.getElementById('paramChart').getContext('2d');
         const paramChart = new Chart(paramCtx, {
-            type: 'bar', // Tipo de gráfico de barras
+            type: 'bar',
             data: {
                 labels: paramLabels,
                 datasets: [
@@ -463,36 +415,36 @@
                         backgroundColor: barColors,
                         borderColor: borderColors,
                         borderWidth: 1,
-                        order: 1 // Garante que as barras sejam desenhadas primeiro
+                        order: 1
                     },
                     {
                         label: 'Faixa Ideal Mínima',
                         data: minIdealValues,
                         type: 'line',
-                        borderColor: 'rgba(52, 152, 219, 0.8)', // Cor da linha ideal
+                        borderColor: 'rgba(52, 152, 219, 0.8)',
                         borderWidth: 2,
                         pointRadius: 0,
                         fill: false,
                         tension: 0,
-                        borderDash: [5, 5], // Linha tracejada
-                        order: 2 // Desenha depois das barras
+                        borderDash: [5, 5],
+                        order: 2
                     },
                     {
                         label: 'Faixa Ideal Máxima',
                         data: maxIdealValues,
                         type: 'line',
-                        borderColor: 'rgba(52, 152, 219, 0.8)', // Cor da linha ideal
+                        borderColor: 'rgba(52, 152, 219, 0.8)',
                         borderWidth: 2,
                         pointRadius: 0,
                         fill: false,
                         tension: 0,
-                        borderDash: [5, 5], // Linha tracejada
-                        order: 3 // Desenha depois das barras
+                        borderDash: [5, 5],
+                        order: 3
                     }
                 ]
             },
             options: {
-                indexAxis: 'y', // Torna o gráfico de barras horizontal
+                indexAxis: 'y',
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
@@ -514,4 +466,130 @@
                     tooltip: {
                         callbacks: {
                             label: function(context) {
-                                const label = context.dataset.labe
+                                if (context.dataset.label === 'Valor Encontrado') {
+                                    return `${context.dataset.label}: ${context.parsed.x} ${paramsData[paramLabels[context.dataIndex].toLowerCase().split(' ')[0]].unit}`;
+                                } else {
+                                    return `${context.dataset.label}: ${context.parsed.x} ${paramsData[paramLabels[context.dataIndex].toLowerCase().split(' ')[0]].unit}`;
+                                }
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: Math.max(...Object.values(paramsData).map(p => p.maxChart)),
+                        grid: {
+                            color: '#eee'
+                        },
+                        title: {
+                            display: true,
+                            text: 'Valor'
+                        }
+                    },
+                    y: {
+                        grid: {
+                            color: '#eee'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Dados da granulometria
+        const granulometryData = [
+            { malha: '50mm', peso: 18.12, percentual: 0.43 },
+            { malha: '37,5mm', peso: 118.22, percentual: 2.79 },
+            { malha: '25mm', peso: 495.48, percentual: 11.69 },
+            { malha: '16mm', peso: 1459.90, percentual: 34.45 },
+            { malha: '6,3mm', peso: 1913.53, percentual: 45.16 },
+            { malha: '2,0mm', peso: 212.36, percentual: 5.01 },
+            { malha: '0,0mm', peso: 19.67, percentual: 0.46 }
+        ];
+
+        const granLabels = granulometryData.map(item => item.malha);
+        const granPesos = granulometryData.map(item => item.peso);
+        const granPercent = granulometryData.map(item => item.percentual);
+
+        // Gráfico de barras da granulometria (percentual)
+        const granCtx = document.getElementById('granulometryChart').getContext('2d');
+        const granulometryChart = new Chart(granCtx, {
+            type: 'bar',
+            data: {
+                labels: granLabels,
+                datasets: [
+                    {
+                        label: 'Percentual (%)',
+                        data: granPercent,
+                        backgroundColor: 'rgba(52, 152, 219, 0.7)',
+                        borderColor: 'rgba(41, 128, 185, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Peso (g)',
+                        data: granPesos,
+                        type: 'line',
+                        borderColor: 'rgba(46, 204, 113, 1)',
+                        backgroundColor: 'rgba(46, 204, 113, 0.2)',
+                        yAxisID: 'y-peso',
+                        borderWidth: 2,
+                        fill: false,
+                        tension: 0.3,
+                        pointRadius: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Distribuição Granulométrica (%) e Peso (g)',
+                        font: {
+                            size: 16,
+                            weight: 'bold'
+                        }
+                    },
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 12,
+                            padding: 20
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                if (context.dataset.label === 'Percentual (%)') {
+                                    return `Percentual: ${context.parsed.y.toFixed(2)}%`;
+                                } else if (context.dataset.label === 'Peso (g)') {
+                                    return `Peso: ${context.parsed.y.toFixed(2)}g`;
+                                }
+                                return '';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 50,
+                        title: { display: true, text: 'Percentual (%)' },
+                        grid: { color: '#eee' }
+                    },
+                    'y-peso': {
+                        beginAtZero: true,
+                        position: 'right',
+                        title: { display: true, text: 'Peso (g)' },
+                        grid: { drawOnChartArea: false }
+                    },
+                    x: {
+                        grid: { color: '#eee' }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
